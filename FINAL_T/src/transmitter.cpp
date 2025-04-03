@@ -32,7 +32,7 @@ bool rightPressedPrev = false;
 // 帮助函数：根据电位器档位 + 按钮状态 -> 生成要发送的指令
 TxCommand makeCommand(PotLevel level, bool leftDown, bool rightDown , bool skipDown) {
     //LeftDown + Low => LEFT_LOW,  LeftDown + High => LEFT_HIGH
-
+    Serial.printf("Level:%.2f LeftDown:%d  rightDown:%d, Both:%d\n",level,leftDown,rightDown);
     if (level == PotLevel::LEVEL_STOP) {
         return TxCommand::STOP;
     }
