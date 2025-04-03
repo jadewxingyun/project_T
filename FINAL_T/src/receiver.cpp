@@ -7,7 +7,7 @@
 
 // =========== NeoPixel 配置 ===========
 // 8 颗灯珠，接在 GPIO 6 
-#define LED_PIN    6        
+#define LED_PIN    32        
 #define LED_COUNT  8        
 Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
