@@ -51,11 +51,11 @@ TxCommand makeCommand(PotLevel level, bool leftDown, bool rightDown , bool skipD
         }
         else {
             if (leftDown && !rightDown) {
-                return TxCommand::LEFT_LOW_REQUIRED; // Low
+                return TxCommand::LEFT_LOW_BOTH; // Low
             }
             // 如果右键按下
             if (rightDown && !leftDown) {
-                return TxCommand::RIGHT_LOW_REQUIRED;
+                return TxCommand::RIGHT_LOW_BOTH;
             }
         }
         if (!rightDown && !leftDown) {
@@ -73,10 +73,10 @@ TxCommand makeCommand(PotLevel level, bool leftDown, bool rightDown , bool skipD
             }
         }else{
             if (leftDown && !rightDown) {
-                return TxCommand::LEFT_HIGH_REQUIRED;
+                return TxCommand::LEFT_HIGH_BOTH;
             }
             if (rightDown && !leftDown) {
-                return TxCommand::RIGHT_HIGH_REQUIRED;
+                return TxCommand::RIGHT_HIGH_BOTH;
             }
         }
         if (!rightDown && !leftDown) {
